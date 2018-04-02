@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.limxing.datepicker.MainActivity">
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/text"
+        android:onClick="click"
+        android:clickable="true"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <TextView
+        android:layout_marginBottom="150dp"
+        android:id="@+id/select"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text"
+        android:text="按月选择"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_marginLeft="30dp"
+        android:layout_above="@+id/data_line"
+        android:text="2017-1-19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/end_time"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/data_line"
+        android:text="2017-1-19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:id="@+id/data_line"
+        android:layout_above="@+id/delete"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/pickerview_bgColor_overlay"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="       "/>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/pickerview_bgColor_overlay"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="至"/>
+
+    <ImageView
+        android:background="@drawable/delete"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/fl"
+        android:layout_alignParentRight="true"
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <!--这个的高度一定要够高，不然这个时间选择器会出问题-->
+    <FrameLayout
+        android:layout_below="@+id/select"
+        android:background="@color/white"
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        />
+
+
+</RelativeLayout>
